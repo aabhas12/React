@@ -9,12 +9,13 @@ class App extends Component {
         super();
         this.state = {title:"Aabhas is not here"};
     }
+    changetext(title){
+        this.setState({title});
+    }
     render() {
-        setTimeout(()=>{this.setState({title:"Aabhas is here"});},2000)
-        const title = "Aabhas is here";
         return (
             <div className="App">
-                <Header title={this.state.title}/>
+                <Header changetext={this.changetext.bind(this)} title={this.state.title}/>
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1 className="App-title">Welcome to React Aabhas</h1>
                 <Footer/>
