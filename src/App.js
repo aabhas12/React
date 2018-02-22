@@ -6,9 +6,10 @@ import Footer from "./Footer";
 
 class App extends Component {
     render() {
+        const title = "Aabhas is here";
         return (
             <div className="App">
-                <Header/>
+                <Header title={title}/>
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1 className="App-title">Welcome to React Aabhas</h1>
                 <Footer/>
